@@ -1,20 +1,20 @@
 {
     "workbench.startupEditor": "none",
-    "emojisense.unicodeCompletionsEnabled": true, // enable completions that insert emoji as unicode
+    "emojisense.unicodeCompletionsEnabled": true, // enables completions that insert emoji as unicode
+    "emojisense.emojiDecoratorsEnabled": true, // enables emoji decorators for emoji markup
     "emojisense.markupCompletionsEnabled": true, // enable completions that insert emoji markup
-    "emojisense.showOnColon": true, // show emoji when typing colon
-    "emojisense.emojiDecoratorsEnabled": true, // show emoji decorators inline
+    "emojisense.showOnColon": true,  // emables emoji completions shown when you type a colon
 
-    // Emojisense languages
     "emojisense.languages": {
-        "html": true,
-        "javascript": true,
+        "markdown": true,
         "python": true,
+        "javascript": true,
+        "html": true,
         "css": true,
         "sql": true,
         "typescript": true,
+        "git-commit": true
     },
-    "discord.detailsEditing": "Editing {filename} (Line {currentline}/{totallines})",
-    "terminal.integrated.shell.linux": "/bin/zsh",
-    "sshfs.configs": []
-}
+    "workbench.colorTheme": "One Dark Pro",
+    "workbench.iconTheme": "material-icon-theme"
+}   
