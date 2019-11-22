@@ -1,0 +1,42 @@
+URxvt.font: xft:monospace:size=12
+URxvt.scrollBar: false
+URxvt.perl-ext-common: resize-font
+URxvt.transparent: true
+URxvt.shading: 20
+
+! special
+*.foreground:   #b0cccb
+*.background:   #0e1212
+*.cursorColor:  #b0cccb
+
+! black
+*.color0:       #171d1c
+*.color8:       #8ec9c7
+
+! red
+*.color1:       #1f2525
+*.color9:       #d872d6
+
+! green
+*.color2:       #2e3737
+*.color10:      #8ace8e
+
+! yellow
+*.color3:       #434f4e
+*.color11:      #e9b6e8
+
+! blue
+*.color4:       #5d6d6c
+*.color12:      #95dbd9
+
+! magenta
+*.color5:       #7c908f
+*.color13:      #dab2b4
+
+! cyan
+*.color6:       #a0bab9
+*.color14:      #73b4b1
+
+! white
+*.color7:       #c9e9e8
+*.color15:      #b0a27e

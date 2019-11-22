@@ -1,0 +1,20 @@
+{
+    "workbench.startupEditor": "none",
+    "emojisense.unicodeCompletionsEnabled": true, // enables completions that insert emoji as unicode
+    "emojisense.emojiDecoratorsEnabled": true, // enables emoji decorators for emoji markup
+    "emojisense.markupCompletionsEnabled": true, // enable completions that insert emoji markup
+    "emojisense.showOnColon": true,  // emables emoji completions shown when you type a colon
+
+    "emojisense.languages": {
+        "markdown": true,
+        "python": true,
+        "javascript": true,
+        "html": true,
+        "css": true,
+        "sql": true,
+        "typescript": true,
+        "git-commit": true
+    },
+    "workbench.colorTheme": "One Dark Pro",
+    "workbench.iconTheme": "material-icon-theme"
+}
