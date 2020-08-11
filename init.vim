@@ -20,6 +20,7 @@ call plug#begin(stdpath('data') . '/plugged')
 Plug 'dense-analysis/ale'
 Plug 'preservim/nerdtree'
 Plug 'aserebryakov/vim-todo-lists'
+Plug 'alvan/vim-closetag'
 call plug#end()
 
 " Plugin config
@@ -47,6 +48,17 @@ let g:ale_linters = {
 " Linting for react
 let g:ale_linter_aliases = {'typescriptreact': 'typescript'}
 
+" vim-closetag
+let g:closetag_filenames = '*.html'
+let g:closetag_filetypes = 'html'
+
 " Settings for syntax highlighting
 highlight ALEWarning ctermfg=yellow cterm=undercurl
 highlight ALEError ctermfg=red cterm=strikethrough
+highlight GroupA ctermbg=black
+match GroupA / \+$/
+
+" listchars - https://medium.com/usevim/understanding-listchars-acb9e5a90854
+" 'list' is used to visualise tabs, spaces and line endings.
+" 'listchars' determines strings that will be used when list mode is active.
+set list lcs=trail:.,tab:..
