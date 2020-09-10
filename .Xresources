@@ -1,3 +1,12 @@
+! Xterm
+XTerm.termName: xterm-256color
+XTerm.vt100.reverseVideo: true
+XTerm.vt100.saveLines: 4096
+XTerm.vt100.translations: #override \
+Meta <Key> minus: smaller-vt-font() \n\
+Meta <Key> plus: larger-vt-font() \n
+
+!Urxvt
 URxvt.font: xft:monospace:size=12
 URxvt.scrollBar: false
 URxvt.perl-ext-common: resize-font
