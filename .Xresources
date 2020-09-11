@@ -1,12 +1,8 @@
 xterm*termName: xterm-256color
 xterm*faceName: cozette
 xterm*faceSize: 11
-xterm*reverseVideo: true
 
-! double-click to select whole URLs :D
-xterm*charClass: 33:48,36-47:48,58-59:48,61:48,63-64:48,95:48,126:48
-
-xterm*cursorColor: #c1c0ca
+xterm*cursorColor: #fff
 
 ! Border
 xterm*internalBorder: 24
