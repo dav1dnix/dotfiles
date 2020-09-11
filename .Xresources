@@ -1,51 +1,19 @@
-! Xterm
-XTerm.termName: xterm-256color
-XTerm.vt100.reverseVideo: true
-XTerm.vt100.saveLines: 4096
-XTerm.vt100.translations: #override \
-Meta <Key> minus: smaller-vt-font() \n\
-Meta <Key> plus: larger-vt-font() \n
+xterm*termName: xterm-256color
+xterm*faceName: cozette
+xterm*faceSize: 11
+xterm*reverseVideo: true
 
-!Urxvt
-URxvt.font: xft:monospace:size=12
-URxvt.scrollBar: false
-URxvt.perl-ext-common: resize-font
-URxvt.transparent: true
-URxvt.shading: 20
+! double-click to select whole URLs :D
+xterm*charClass: 33:48,36-47:48,58-59:48,61:48,63-64:48,95:48,126:48
 
-! special
-*.foreground:   #b0cccb
-*.background:   #0e1212
-*.cursorColor:  #b0cccb
+xterm*cursorColor: #c1c0ca
 
-! black
-*.color0:       #171d1c
-*.color8:       #8ec9c7
+! Border
+xterm*internalBorder: 24
 
-! red
-*.color1:       #1f2525
-*.color9:       #d872d6
-
-! green
-*.color2:       #2e3737
-*.color10:      #8ace8e
-
-! yellow
-*.color3:       #434f4e
-*.color11:      #e9b6e8
-
-! blue
-*.color4:       #5d6d6c
-*.color12:      #95dbd9
-
-! magenta
-*.color5:       #7c908f
-*.color13:      #dab2b4
-
-! cyan
-*.color6:       #a0bab9
-*.color14:      #73b4b1
-
-! white
-*.color7:       #c9e9e8
-*.color15:      #b0a27e
+! Translations
+xterm*VT100.Translations: #override \
+  Meta <Key> minus: smaller-vt-font() \n\
+  Ctrl Shift <Key>V:      insert-selection(CLIPBOARD) \n\
+  Ctrl Shift <Key>C:      copy-selection(CLIPBOARD)
+  Meta <Key> plus: larger-vt-font() \n
