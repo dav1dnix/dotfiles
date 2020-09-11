@@ -115,3 +115,6 @@ fi
 # Aliases
 alias sudo='sudo -p "pwd: "'
 alias xr="xrandr --output HDMI-2 --mode 1920x1080"
+
+# PS1
+export PS1='\[\e[01;34m\]\w/\[\e[m\] '
