@@ -1,4 +1,5 @@
 set number
+set hlsearch
 syntax on
 
 " Status bar
