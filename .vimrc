@@ -1,5 +1,4 @@
 set number
-set hlsearch
 syntax on
 
 " Status bar
@@ -17,7 +16,7 @@ set shiftwidth=2
 set expandtab
 
 " Plugins
-call plug#begin('~/.vim/plugged')
+call plug#begin('~.vim/plugged')
 Plug 'dense-analysis/ale'
 Plug 'preservim/nerdtree'
 Plug 'aserebryakov/vim-todo-lists'
