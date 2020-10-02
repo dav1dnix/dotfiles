@@ -1,3 +1,4 @@
+! XTerm
 xterm*termName: xterm-256color
 xterm*faceName: cozette
 xterm*faceSize: 11
@@ -13,3 +14,11 @@ xterm*VT100.Translations: #override \
   Ctrl Shift <Key>V:      insert-selection(CLIPBOARD) \n\
   Ctrl Shift <Key>C:      copy-selection(CLIPBOARD)
   Meta <Key> plus: larger-vt-font() \n
+
+!URxvt
+URxvt.scrollBar: false
+URxvt.reverseVideo: true
+URxvt*scrollTtyKeypress: true
+URxvt.font: xft:Cozette
+URxvt.letterSpace: -1
+URxvt*scrollTtyOutput: false
