@@ -112,7 +112,13 @@ if ! shopt -oq posix; then
   fi
 fi
 
+set -o vi
+
+parse_git_branch() {
+  git branch 2> /dev/null | sed -e 's/* \(.*\)/ (\xef\x84\xa6 \1)/'
+}
+
 # PS1
-export PS1='\[\e[01;30m\]\w/\[\e[m\] '
+export PS1='\[\033[01;30m\]\u \w$(parse_git_branch)\[\033[m\] $ '
 
 export PATH=$PATH:/usr/local/go/bin:~/go/bin
