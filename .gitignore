@@ -8,6 +8,7 @@
 !/.config/
 !/.fonts
 !/.Xresources
+!/.Xauthority
 !/.bashrc
 !/.bash_aliases
 !/README.md
