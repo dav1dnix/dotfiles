@@ -1,0 +1,13 @@
+# Ignore all files and dirs so I don't accidentally upload everything
+/*
+/*/
+
+!/.gitignore
+!/.xinitrc
+!/.vimrc
+!/.config/
+!/.fonts
+!/.Xresources
+!/.bashrc
+!/.bash_aliases
+!/README.md
