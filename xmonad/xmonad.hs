@@ -39,5 +39,5 @@ myConfig = def {
   modMask = myModMask,
   terminal = myTerminal,
   borderWidth = 10,
-  layoutHook = noBorders Full
+  layoutHook = noBorders Full 
 }
