@@ -1,13 +1,19 @@
+" Configuration
 set number
 set hlsearch
 syntax on
-set background=light
+set background=dark
+set cmdheight=2 " show full errors
+set modifiable
 
-" Status bar
+" Status Line
 set statusline=
 set statusline+=%#TabLineSel#
-set statusline+=\ %f
+set statusline+=\ %F
+set statusline+=\ %{getfsize(expand(@%))}\ bytes
 set statusline+=%=
+set statusline+=\ %m
+set statusline+=\ %y
 set statusline+=\ %p%%
 set statusline+=\ %l:%c
 
@@ -18,11 +24,12 @@ set shiftwidth=2
 set expandtab
 
 " Plugins
-call plug#begin('~/.vim/plugged')
+call plug#begin('~/.config/nvim/plugged')
 Plug 'dense-analysis/ale'
 Plug 'preservim/nerdtree'
 Plug 'aserebryakov/vim-todo-lists'
 Plug 'alvan/vim-closetag'
+Plug 'ryanoasis/vim-devicons'
 call plug#end()
 
 " Plugin config
@@ -37,14 +44,17 @@ let g:ale_fixers = {
     \ 'html': ['prettier'],
     \ 'yaml': ['prettier'],
     \ 'go': ['goimports'],
+    \ 'rust': ['rustfmt'],
     \ }
 
 let g:ale_linters = {
-    \ 'javascript': ['eslint'],
-    \ 'typescript': ['eslint'],
+    \ 'javascript': ['tsserver'],
+    \ 'typescript': ['tsserver'],
     \ 'yaml': ['yamllint'],
     \ 'go': ['gopls'],
     \ 'python': ['flake8'],
+    \ 'zig': ['zls'],
+    \ 'rust': ['rls'],
     \ }
 
 " Linting for react
