@@ -1,7 +1,7 @@
 ! XTerm
 xterm*termName: xterm-256color
-xterm*faceName: cozette
-xterm*faceSize: 11
+xterm*faceName: Iosevka
+xterm*faceSize: 17
 xterm*reverseVideo: false
 
 xterm*cursorColor: #fff
