@@ -73,7 +73,7 @@ map <C-n> :NERDTreeToggle<CR>
 
 " Settings for syntax highlighting
 highlight ALEWarning ctermfg=yellow cterm=undercurl
-highlight ALEError ctermfg=red cterm=strikethrough
+highlight ALEError ctermfg=red cterm=underline
 highlight GroupA ctermbg=black
 match GroupA / \+$/
 
