@@ -18,11 +18,13 @@ xterm*VT100.Translations: #override \
 
 !URxvt
 URxvt.scrollBar: false
-URxvt.reverseVideo: true
+URxvt.reverseVideo: false
 URxvt*scrollTtyKeypress: true
-URxvt.font: xft:Cozette
+URxvt*font: xft:Iosevka:pixelsize=18
 URxvt.letterSpace: -1
 URxvt*scrollTtyOutput: false
+URxvt.internalBorder: 20
+
 ! special
 *.foreground:   #b9b9b9
 *.background:   #101010

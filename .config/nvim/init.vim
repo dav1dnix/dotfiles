@@ -5,17 +5,21 @@ syntax on
 set background=dark
 set cmdheight=2 " show full errors
 set modifiable
+set relativenumber
+
+autocmd InsertLeave * write
 
 " Status Line
 set statusline=
 set statusline+=%#TabLineSel#
 set statusline+=\ %F
+set statusline+=\ -
 set statusline+=\ %{getfsize(expand(@%))}\ bytes
 set statusline+=%=
 set statusline+=\ %m
 set statusline+=\ %y
 set statusline+=\ %p%%
-set statusline+=\ %l:%c
+set statusline+=\ %l/%c
 
 " Indentation
 set tabstop=2
@@ -67,14 +71,17 @@ let g:closetag_filetypes = 'html'
 " Nerdtree
 " Open nerdtree automatically when starting nvim
 autocmd vimenter * NERDTree
+autocmd vimenter * wincmd l
 
 " Toggle opening and closing of nerdtree
 map <C-n> :NERDTreeToggle<CR>
 
 " Settings for syntax highlighting
-highlight ALEWarning ctermfg=yellow cterm=undercurl
-highlight ALEError ctermfg=red cterm=underline
-highlight GroupA ctermbg=black
+hi ModeMsg ctermbg=DarkGrey
+hi CursorLineNr ctermbg=DarkGrey
+hi ALEWarning ctermfg=yellow cterm=undercurl
+hi ALEError ctermfg=red cterm=underline
+hi GroupA ctermbg=black
 match GroupA / \+$/
 
 " listchars - https://medium.com/usevim/understanding-listchars-acb9e5a90854

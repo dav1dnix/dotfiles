@@ -12,10 +12,11 @@ import XMonad.Layout.Spacing -- window gaps
 -- http://hackage.haskell.org/package/base-4.6.0.1/docs/Prelude.html#v:-62--62--61-
 main = xmonad =<< statusBar myBar myPP toggleStrutsKey myConfig
 
-myTerminal = "WINIT_X11_SCALE_FACTOR=1 alacritty"
+myTerminal = "rxvt-unicode"  -- "WINIT_X11_SCALE_FACTOR=1 alacritty"
 myModMask = mod4Mask
 
-mySpacing = spacingRaw True
+mySpacing = spacingRaw 
+  False
   (Border 10 10 10 10)
   True
   (Border 10 10 10 10)
@@ -33,11 +34,14 @@ myBar = "xmobar"
   The settings here control the appearance of xmobar.
   Xmonad sends to xmobar with the DynamicLog hook.
 -}
+myTitleColour = "#85C1E9"
 
 -- PP determines what is going to be written to bar
 myPP = xmobarPP {
-  ppCurrent = xmobarColor "#85C1E9" "" . wrap "" "",
-  ppLayout = const "" -- disable layout info
+  ppCurrent = xmobarColor myTitleColour "" . wrap "" "",
+  ppLayout = const "", -- disable layout info
+  ppTitle = xmobarColor myTitleColour "",
+  ppSep = " - "
 }
 
 -- Key binding to toggle gap in bar
@@ -48,14 +52,16 @@ toggleStrutsKey XConfig {XMonad.modMask = modMask} = (modMask, xK_b)
 myKeys = [
  ((myModMask, xK_d), spawn "dmenu_run"), -- dmenu
  ((myModMask, xK_Return), spawn myTerminal), -- I prefer this over mod+Shift+Return because less keys = easier
- ((myModMask, xK_Print), spawn "gnome-screenshot -acf /tmp/tmp.png && cat /tmp/tmp.png | xclip -i -selection clipboard -target image/png") -- Take a screenshot of an area.
+ ((myModMask, xK_Print), spawn "gnome-screenshot -acf /tmp/tmp.png && cat /tmp/tmp.png | xclip -i -selection clipboard -target image/png"), -- Take a screenshot of an area.
+ ((0, 0x1008ff11), spawn "amixer -q sset Master 1%-"),
+ ((0, 0x1008ff13), spawn "amixer -q sset Master 1%+"),
+ ((0, 0x1008ff12), spawn "amixer set Master toggle")
  ]
 
 -- Config for xmonad
 myConfig = def {
   modMask = myModMask,
   terminal = myTerminal,
-  borderWidth = 10,
   layoutHook = myLayoutHook,
   workspaces = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "-", "="]
 } `additionalKeys` myKeys
