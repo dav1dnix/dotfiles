@@ -120,4 +120,5 @@ parse_git_branch() {
 
 # PS1
 #export PS1='\[\033[01;30m\]\u \w$(parse_git_branch)\[\033[m\] $ '
-export PS1="\$([ \$? == 0 ] && echo ✅ || echo ❌️) \\[\033[0;35m\]\u@\h$(parse_git_branch) \\[\033[0;37m\]\w\\[\033[00m\] "
+export PS1="\$([ \$? == 0 ] && echo ✓ || echo ✗) \\[\033[0;35m\]\u@\h$(parse_git_branch) \\[\033[0;37m\]\w\\[\033[00m\] "
+source "$HOME/.cargo/env"
