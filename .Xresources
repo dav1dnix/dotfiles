@@ -29,33 +29,33 @@ URxvt*scrollTtyOutput: false
 *.cursorColor:  #b9b9b9
 
 ! black
-*.color0:       #101010
-*.color8:       #525252
+*.color0:       #191917
+*.color8:       #191917
 
 ! red
-*.color1:       #7c7c7c
-*.color9:       #7c7c7c
+*.color1:       #353732
+*.color9:       #353732
 
 ! green
-*.color2:       #8e8e8e
-*.color10:      #8e8e8e
+*.color2:       #585c52
+*.color10:      #585c52
 
 ! yellow
-*.color3:       #a0a0a0
-*.color11:      #a0a0a0
+*.color3:       #757a6a
+*.color11:      #757a6a
 
 ! blue
-*.color4:       #686868
-*.color12:      #686868
+*.color4:       #848b7a
+*.color12:      #848b7a
 
 ! magenta
-*.color5:       #747474
-*.color13:      #747474
+*.color5:       #99a18c
+*.color13:      #99a18c
 
 ! cyan
-*.color6:       #868686
-*.color14:      #868686
+*.color6:       #bac0ae
+*.color14:      #bac0ae
 
 ! white
-*.color7:       #b9b9b9
-*.color15:      #f7f7f7
+*.color7:       #d6dacd
+*.color15:      #d6dacd
