@@ -2,7 +2,6 @@
 xterm*termName: xterm-256color
 xterm*faceName: Iosevka
 xterm*faceSize: 17
-xterm*reverseVideo: false
 
 ! Border
 xterm*internalBorder: 24
