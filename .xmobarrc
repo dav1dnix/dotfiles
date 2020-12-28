@@ -1,0 +1,15 @@
+Config {
+  font = "xft:Iosevka:style=Regular:size=9:antialias=true",
+  position = BottomW L 100,
+  commands = [
+    Run StdinReader,
+    Run Memory ["-t", "Memory: <usedratio>% <used>mb/<total>mb"] 10,
+    Run Weather "EGGW" ["-t", "Weather: <tempC>C"] 36000,
+    Run Volume "default" "Master" [] 10,
+    Run Wireless "wlxd037456f7aae" ["-t", "<ssid>: <qualitybar>"] 10,
+    Run Date "%H:%M:%S" "date" 10
+  ],
+  sepChar = "%",
+  alignSep = "}{",
+  template = "%StdinReader% | %memory% | %EGGW%}{%default:Master% | %date% "
+}
