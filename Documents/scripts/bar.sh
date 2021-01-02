@@ -3,6 +3,7 @@
 trap 'Update' 5
 
 Desktop() {
+  # This assumes you're running openbox wm
   a=$(xprop -id 0x137 | grep _NET_CURRENT_DESKTOP -m 1 | cut -d " " -f 3 )
   echo -n $(($a+1))
 }
