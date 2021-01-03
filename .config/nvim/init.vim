@@ -6,20 +6,55 @@ set background=dark
 set cmdheight=2 " show full errors
 set modifiable
 set relativenumber
+set cursorline
+set laststatus=2
+set noshowmode
 
 autocmd InsertLeave * write
 
+" Keymaps
+" map & nmap - recursive
+" nnoremap & inoremap - non-recursive
+" e.g. {
+"   :map j gg
+"   :map Q j
+"   // j is mapped to gg and Q is also mapped to gg. This is because j will be
+"   expanded for recursive mapping
+"   :noremap W j
+"   W mapped to j and not gg, because j will not be expanded for non-recursive
+"   mapping.
+" }
+
+nnoremap <C-t> :tabnew<CR>
+nnoremap <C-j> :tabprevious<CR>
+nnoremap <C-k> :tabnext<CR>
+
+" Change name of modes
+let g:currentmode = {
+  \ 'i': 'INSERT',
+  \ 'R': 'REPLACE',
+  \ 'v': 'VISUAL',
+  \ 'n': 'NORMAL',
+  \ 'c': 'CMD'
+  \ }
+
 " Status Line
 set statusline=
-set statusline+=%#TabLineSel#
+set statusline+=%#ColourMode#
+set statusline+=\ %{g:currentmode[mode()]}
+set statusline+=\ %#StatusLine#
 set statusline+=\ %F
 set statusline+=\ -
 set statusline+=\ %{getfsize(expand(@%))}\ bytes
 set statusline+=%=
+set statusline+=%#ColourMode#
 set statusline+=\ %m
 set statusline+=\ %y
 set statusline+=\ %p%%
-set statusline+=\ %l/%c
+set statusline+=\ ln:
+set statusline+=\ %l,
+set statusline+=\ cl:
+set statusline+=\ %c
 
 " Indentation
 set tabstop=2
@@ -68,20 +103,32 @@ let g:ale_linter_aliases = {'typescriptreact': 'typescript'}
 let g:closetag_filenames = '*.html'
 let g:closetag_filetypes = 'html'
 
+" Errors and warnings
+let g:ale_sign_error = '✗'
+let g:ale_sign_warning = '⚠'
+
 " Nerdtree
 " Open nerdtree automatically when starting nvim
 autocmd vimenter * NERDTree
 autocmd vimenter * wincmd l
 
+" Make NERDTree look a bit nicer
+let NERDTreeMinimalUI = 1
+
 " Toggle opening and closing of nerdtree
 map <C-n> :NERDTreeToggle<CR>
 
 " Settings for syntax highlighting
-hi ModeMsg ctermbg=DarkGrey
-hi CursorLineNr ctermbg=DarkGrey
-hi ALEWarning ctermfg=yellow cterm=undercurl
-hi ALEError ctermfg=red cterm=underline
-hi GroupA ctermbg=black
+hi ModeMsg ctermbg=Black
+hi CursorLine cterm=None ctermbg=Black
+hi ALEWarning ctermfg=Yellow cterm=undercurl
+hi ALEError ctermfg=Red cterm=underline
+hi GroupA ctermbg=White
+hi Pmenu ctermbg=LightBlue
+hi StatusLine ctermfg=Grey
+hi ColourMode ctermbg=Black
+hi Directory ctermfg=White
+
 match GroupA / \+$/
 
 " listchars - https://medium.com/usevim/understanding-listchars-acb9e5a90854
