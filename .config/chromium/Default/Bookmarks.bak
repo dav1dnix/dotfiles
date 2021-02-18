@@ -1,0 +1,47 @@
+{
+   "checksum": "03d3241dcbb09dc2e4e86f0afc1bf8cf",
+   "roots": {
+      "bookmark_bar": {
+         "children": [ {
+            "date_added": "13258136470213998",
+            "guid": "7b55409b-ad74-40e2-a6a8-aa013a2c2c3f",
+            "id": "5",
+            "name": "keyboard shortcuts - How to customize keybindings on ST i.e. simple/suckless terminal? - Unix & Linux Stack Exchange",
+            "type": "url",
+            "url": "https://unix.stackexchange.com/questions/479685/how-to-customize-keybindings-on-st-i-e-simple-suckless-terminal"
+         }, {
+            "date_added": "13258136519245569",
+            "guid": "f0657cfc-2034-44c7-be87-76528b907d53",
+            "id": "6",
+            "name": "H: Keysyms - Xlib Reference Manual for Version 11 of the X Window System [Book]",
+            "type": "url",
+            "url": "https://www.oreilly.com/library/view/xlib-reference-manual/9780937175262/16_appendix-h.html"
+         } ],
+         "date_added": "13258134687309583",
+         "date_modified": "13258136519245569",
+         "guid": "00000000-0000-4000-a000-000000000002",
+         "id": "1",
+         "name": "Bookmarks bar",
+         "type": "folder"
+      },
+      "other": {
+         "children": [  ],
+         "date_added": "13258134687309584",
+         "date_modified": "0",
+         "guid": "00000000-0000-4000-a000-000000000003",
+         "id": "2",
+         "name": "Other bookmarks",
+         "type": "folder"
+      },
+      "synced": {
+         "children": [  ],
+         "date_added": "13258134687309585",
+         "date_modified": "0",
+         "guid": "00000000-0000-4000-a000-000000000004",
+         "id": "3",
+         "name": "Mobile bookmarks",
+         "type": "folder"
+      }
+   },
+   "version": 1
+}

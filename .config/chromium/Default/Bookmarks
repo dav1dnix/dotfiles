@@ -1,0 +1,68 @@
+{
+   "checksum": "259798ecb9f95425d0019739e096a2de",
+   "roots": {
+      "bookmark_bar": {
+         "children": [ {
+            "date_added": "13258136470213998",
+            "guid": "7b55409b-ad74-40e2-a6a8-aa013a2c2c3f",
+            "id": "5",
+            "name": "keyboard shortcuts - How to customize keybindings on ST i.e. simple/suckless terminal? - Unix & Linux Stack Exchange",
+            "type": "url",
+            "url": "https://unix.stackexchange.com/questions/479685/how-to-customize-keybindings-on-st-i-e-simple-suckless-terminal"
+         }, {
+            "date_added": "13258136519245569",
+            "guid": "f0657cfc-2034-44c7-be87-76528b907d53",
+            "id": "6",
+            "name": "H: Keysyms - Xlib Reference Manual for Version 11 of the X Window System [Book]",
+            "type": "url",
+            "url": "https://www.oreilly.com/library/view/xlib-reference-manual/9780937175262/16_appendix-h.html"
+         }, {
+            "date_added": "13258141452721691",
+            "guid": "9e3859b4-0579-4f14-af0f-dfdf846ee858",
+            "id": "8",
+            "name": "How to reset, revert, and return to previous states in Git | Opensource.com",
+            "type": "url",
+            "url": "https://opensource.com/article/18/6/git-reset-revert-rebase-commands"
+         }, {
+            "date_added": "13258141455438801",
+            "guid": "6e7c20b1-1dc0-49c5-a242-0509abff1b95",
+            "id": "9",
+            "name": "Git Revert | Atlassian Git Tutorial",
+            "type": "url",
+            "url": "https://www.atlassian.com/git/tutorials/undoing-changes/git-revert"
+         }, {
+            "date_added": "13258141916713786",
+            "guid": "b7796516-8edf-4312-af93-94ecf65ffb4b",
+            "id": "10",
+            "name": "git - How can I remove a commit on GitHub? - Stack Overflow",
+            "type": "url",
+            "url": "https://stackoverflow.com/questions/448919/how-can-i-remove-a-commit-on-github"
+         } ],
+         "date_added": "13258134687309583",
+         "date_modified": "13258141916713786",
+         "guid": "00000000-0000-4000-a000-000000000002",
+         "id": "1",
+         "name": "Bookmarks bar",
+         "type": "folder"
+      },
+      "other": {
+         "children": [  ],
+         "date_added": "13258134687309584",
+         "date_modified": "0",
+         "guid": "00000000-0000-4000-a000-000000000003",
+         "id": "2",
+         "name": "Other bookmarks",
+         "type": "folder"
+      },
+      "synced": {
+         "children": [  ],
+         "date_added": "13258134687309585",
+         "date_modified": "0",
+         "guid": "00000000-0000-4000-a000-000000000004",
+         "id": "3",
+         "name": "Mobile bookmarks",
+         "type": "folder"
+      }
+   },
+   "version": 1
+}
