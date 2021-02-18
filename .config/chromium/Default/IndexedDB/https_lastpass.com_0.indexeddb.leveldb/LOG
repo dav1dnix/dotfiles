@@ -1,5 +1,0 @@
-2021/02/18-17:08:19.086 cfa Reusing MANIFEST /home/david/.config/chromium/Default/IndexedDB/https_lastpass.com_0.indexeddb.leveldb/MANIFEST-000001
-2021/02/18-17:29:20.519 1460 Level-0 table #5: started
-2021/02/18-17:29:20.522 1460 Level-0 table #5: 2505 bytes OK
-2021/02/18-17:29:20.526 1460 Delete type=0 #3
-2021/02/18-17:29:20.526 1460 Manual compaction at level-0 from (begin) .. (end); will stop at (end)

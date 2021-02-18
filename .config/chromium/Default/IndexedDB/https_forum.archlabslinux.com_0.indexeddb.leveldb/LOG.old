@@ -1,5 +1,0 @@
-2021/02/18-15:55:46.685 1396 Reusing MANIFEST /home/david/.config/chromium/Default/IndexedDB/https_forum.archlabslinux.com_0.indexeddb.leveldb/MANIFEST-000001
-2021/02/18-16:00:48.335 154b Level-0 table #5: started
-2021/02/18-16:00:48.340 154b Level-0 table #5: 58484 bytes OK
-2021/02/18-16:00:48.343 154b Delete type=0 #3
-2021/02/18-16:00:48.343 154b Manual compaction at level-0 from (begin) .. (end); will stop at (end)
