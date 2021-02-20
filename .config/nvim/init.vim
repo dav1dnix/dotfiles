@@ -26,6 +26,7 @@ autocmd InsertLeave * write
 " }
 
 nnoremap <C-t> :tabnew<CR>
+nnoremap <C-w> :tabclose<CR>
 nnoremap <C-j> :tabprevious<CR>
 nnoremap <C-k> :tabnext<CR>
 
@@ -34,15 +35,18 @@ let g:currentmode = {
   \ 'i': 'INSERT',
   \ 'R': 'REPLACE',
   \ 'v': 'VISUAL',
+  \ 'V': 'VISUAL LINE',
   \ 'n': 'NORMAL',
-  \ 'c': 'CMD'
+  \ 'c': 'CMD',
+  \ "\<C-V>": 'VISUAL BLOCK'
   \ }
 
 " Status Line
 set statusline=
 set statusline+=%#ColourMode#
 set statusline+=\ %{g:currentmode[mode()]}
-set statusline+=\ %#StatusLine#
+set statusline+=\ %#ColourMode#
+" set statusline+=\ %#StatusLine#
 set statusline+=\ %F
 set statusline+=\ -
 set statusline+=\ %{getfsize(expand(@%))}\ bytes
@@ -69,7 +73,10 @@ Plug 'preservim/nerdtree'
 Plug 'aserebryakov/vim-todo-lists'
 Plug 'alvan/vim-closetag'
 Plug 'ryanoasis/vim-devicons'
+Plug 'rafi/awesome-vim-colorschemes'
 call plug#end()
+
+colorscheme OceanicNext
 
 " Plugin config
 let g:ale_completion_enabled=1
@@ -124,7 +131,7 @@ hi CursorLine cterm=None ctermbg=Black
 hi ALEWarning ctermfg=Yellow cterm=undercurl
 hi ALEError ctermfg=Red cterm=underline
 hi GroupA ctermbg=White
-hi Pmenu ctermbg=LightBlue
+hi Pmenu ctermbg=Black
 hi StatusLine ctermfg=Grey
 hi ColourMode ctermbg=Black
 hi Directory ctermfg=White
