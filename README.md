@@ -1,3 +1,2 @@
-# Dots
-## Linux dotfiles
-To use, clone to your `$HOME` directory.
+# Dotfiles :penguin:
+![alt text](https://i.imgur.com/xdxNAZe.png)
