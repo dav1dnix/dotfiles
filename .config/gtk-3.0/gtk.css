@@ -1,5 +1,21 @@
+/* XFCE */
+
+/* Panel */
 .xfce4-panel .tasklist .toggle {
-  background: lightblue;
-  color: black;
   border-radius: 3px;
+}
+
+.xfce4-panel .tasklist .toggle:hover {
+  background: mediumpurple;
+}
+
+#clock-button {
+  color: black;
+  background: lightblue;
+  border-radius: 0px;
+}
+
+#xfce-panel-toggle-button:checked {
+  background: #fff;
+  color: #000;
 }
