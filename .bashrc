@@ -115,8 +115,10 @@ fi
 set -o vi
 
 parse_git_branch() {
-  git branch 2>/dev/null | awk '{print "(" $2 ")"}'
+  git branch 2>/dev/null | awk '{print " (" $2 ")"}'
 }
 
 # PS1
-export PS1='$([ $? = 0 ] && printf "\[\033[1;32m\xE2\x9C\x94\]" || printf "\[\033[1;31m\xE2\x9C\x97\]") \[\033[01;32m\]\u@\h \[\033[34m\]$(parse_git_branch) \w\[\033[0m\] $ '
+export PS1='$([ $? = 0 ] && printf "\[\033[1;32m\xE2\x9C\x94\]" || printf "\[\033[1;31m\xE2\x9C\x97\]") \[\033[01;32m\]\u@\h\[\033[34m\]$(parse_git_branch) \w\[\033[0m\] $ '
+
+eval "$(dircolors ~/.dircolors)";
