@@ -2,10 +2,19 @@
 
 # startup
 pgrep -x sxhkd > /dev/null || sxhkd &
-compton &
+picom --experimental-backends --config ~/.config/picom/picom.conf &
 dunst &
+xset r rate 200 25
+setxkbmap gb
+polybar mybar &
 
-bspc monitor -d I II III IV V VI VII VIII IX X
+# Fix intellij idea
+wmname LG3D &
+
+# bg
+feh --bg-scale ~/Downloads/2880x1800-spanish-sky-blue-solid-color-background.jpg
+
+bspc monitor -d I II III IV V
 
 bspc config border_width         2
 bspc config window_gap          12
@@ -14,8 +23,19 @@ bspc config split_ratio          0.52
 bspc config borderless_monocle   true
 bspc config gapless_monocle      true
 
-bspc rule -a Gimp desktop='^8' state=floating follow=on
-bspc rule -a Chromium desktop='^2'
-bspc rule -a mplayer2 state=floating
-bspc rule -a Kupfer.py focus=on
-bspc rule -a Screenkey manage=off
+# Browsers
+bspc rule -a firefoxdeveloperedition desktop=^1 follow=on
+
+# Terminals
+bspc rule -a Alacritty desktop=^2
+
+# Code
+bspc rule -a jetbrains-idea-ce desktop=^3
+bspc rule -a code-oss desktop=^3
+
+# Steam
+bspc rule -a Steam desktop=^4
+
+# Social
+bspc rule -a discord desktop=^5
+bspc rule -a TelegramDesktop desktop=^5
