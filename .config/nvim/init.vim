@@ -129,6 +129,7 @@ map <C-n> :NERDTreeToggle<CR>
 " Settings for syntax highlighting
 hi ModeMsg ctermbg=Black
 hi CursorLine cterm=None ctermbg=Black
+hi CursorLineNr cterm=None ctermbg=Black ctermfg=Yellow
 hi ALEWarning ctermfg=Yellow cterm=undercurl
 hi ALEError ctermfg=Red cterm=underline
 hi GroupA ctermbg=White
@@ -136,6 +137,8 @@ hi Pmenu ctermbg=Black
 hi StatusLine ctermfg=Grey
 hi ColourMode ctermbg=Black
 hi Directory ctermfg=White
+hi IncSearch ctermfg=Grey ctermbg=White
+hi LineNr ctermfg=Grey
 
 match GroupA / \+$/
 
