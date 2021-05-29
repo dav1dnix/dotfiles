@@ -3,19 +3,24 @@
 /* Panel */
 .xfce4-panel .tasklist .toggle {
   border-radius: 3px;
+  background: transparent;
 }
 
 .xfce4-panel .tasklist .toggle:hover {
-  background: mediumpurple;
-}
-
-#clock-button {
-  color: black;
-  background: lightblue;
-  border-radius: 0px;
+  background: #6a6a6a;
 }
 
 #xfce-panel-toggle-button:checked {
-  background: #fff;
-  color: #000;
+  background: #6a6a6a;
+  color: #fff;
+}
+
+.tasklist image {
+  /* Scale icon to 0 size
+  -gtk-icon-transform: scale(0);
+  margin: -10px; */
+}
+
+#launcher-7 .flat:hover, #launcher-11 .flat:hover, #launcher-16, .flat:hover, #launcher-17 .flat:hover {
+	background: #6a6a6a;
 }
