@@ -87,11 +87,6 @@ fi
 # colored GCC warnings and errors
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
-# some more ls aliases
-alias ll='ls -l'
-alias la='ls -A'
-alias l='ls -CF'
-
 # Alias definitions.
 # You may want to put all your additions into a separate file like
 # ~/.bash_aliases, instead of adding them here directly.
@@ -118,7 +113,15 @@ parse_git_branch() {
   git branch 2>/dev/null | awk '{print " (" $2 ")"}'
 }
 
+dateandtime() {
+  printf "%*s" $COLUMNS "right prompt"
+}
+
 # PS1
-export PS1='$([ $? = 0 ] && printf "\[\033[1;32m\xE2\x9C\x94\]" || printf "\[\033[1;31m\xE2\x9C\x97\]") \[\033[01;32m\]\u@\h\[\033[34m\]$(parse_git_branch) \w\[\033[0m\] $ '
+export PS1='$([ $? = 0 ] && printf "\[\033[1;32m\xE2\x9C\x94\]" || printf "\[\033[1;31m\xE2\x9C\x97\]") \[\033[01;32m\]\u@\h\[\033[34m\]$(parse_git_branch) \w\[\033[0m\] \n$(printf "\[\033[0m\xe2\x86\x92\]") '
 
 eval "$(dircolors ~/.dircolors)";
+
+# Binds
+bind 'set show-all-if-ambiguous on'
+bind 'TAB:menu-complete'
