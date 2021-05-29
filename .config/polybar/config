@@ -42,14 +42,14 @@ padding-right = 2
 module-margin-left = 1
 module-margin-right = 2
 
-font-0 = siji:pixelsize=10;1
+font-0 = Fira Sans:pixelsize=10;1
 font-1 = "Font Awesome 5 Free,Font Awesome 5 Free Solid:style=Solid:pixelsize=8;1"
 font-2 = "Font Awesome 5 Free,Font Awesome 5 Free Regular:style=Regular:pixelsize=8;1"
 font-3 = "Font Awesome 5 Brands,Font Awesome 5 Brands Regular:style=Regular:pixelsize=8;1"
 
 modules-left = bspwm
 modules-center = mpd
-modules-right = xbacklight date powermenu
+modules-right = xbacklight pulseaudio date powermenu
 
 tray-position = right
 tray-padding = 2
@@ -115,6 +115,11 @@ label-empty-padding = 2
 
 enable-click = true
 
+ws-icon-0 = I;
+ws-icon-1 = II;
+ws-icon-2 = III;
+ws-icon-3 = IV;
+ws-icon-4 = V;
 ws-icon-default = 
 
 [module/eth]
@@ -135,12 +140,12 @@ format-disconnected =
 
 [module/date]
 type = internal/date
-interval = 5
+interval = 1
 
 date =
 date-alt = " %d/%m/%Y"
 
-time = %H:%M
+time = %H:%M:%S
 
 format-prefix = 
 format-prefix-foreground = ${colors.foreground-alt}
@@ -151,11 +156,11 @@ label = %date%%time%
 [module/pulseaudio]
 type = internal/pulseaudio
 
-format-volume = <label-volume> <bar-volume>
-label-volume = VOL %percentage%%
+format-volume = <label-volume>
+label-volume =  %percentage%
 label-volume-foreground = ${root.foreground}
 
-label-muted = 🔇 muted
+label-muted = 
 label-muted-foreground = #666
 
 bar-volume-width = 10
