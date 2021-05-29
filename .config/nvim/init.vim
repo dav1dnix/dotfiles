@@ -9,6 +9,7 @@ set relativenumber
 set cursorline
 set laststatus=2
 set noshowmode
+set ignorecase
 
 autocmd InsertLeave * write
 
